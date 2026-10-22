@@ -14,7 +14,7 @@ it puts your own image as the discord background and makes everything transparen
 2. paste this link:
 
 ```
-https://raw.githubusercontent.com/L3ne/vencord-theme/main/len.theme.css
+https://raw.githubusercontent.com/lennmoe/vencord-theme/main/len.theme.css
 ```
 
 **local theme**
