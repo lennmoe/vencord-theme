@@ -3,129 +3,116 @@
  * @author len
  * @description very simple background css
 */
-
-/*customize these*/
 :root {
     --nvbgimg: url("https://i.postimg.cc/KYCTHVwJ/ev309AA-(1).png");
     --nvbgadjust: rgb(
         0 0 0 / 0.6
-    ); /*use this to tone the bg for better visibility*/
+    );
     --scrollbar-thin-track: transparent;
     --scrollbar-auto-track: transparent;
 }
-
-/*we'll set the background image at the very bottom*/
 body {
     background: center/cover var(--nvbgimg) !important;
 }
-/*add the toning layer..*/
 #app-mount {
     background: var(--nvbgadjust) !important;
 }
-
-/*then we clear out backgrounds from a bunch of elements*/
-[class^=app_], /*main app bg*/
-[class^=bg_], /*another bg layer*/
-[class*=guilds_], /*serverlist*/
-[data-list-id="guildsnav"] > [class^=itemsContainer_], /*serverlist if gradient theme enabled*/
-[class^=sidebar_], /*channellist*/
-[class^=sidebar_] [class^=container_], /*another layer on channellist*/
-[class^=page_] > [class^=chat_] > section, /*channels & roles top bar*/
-[class^=page_] > [class^=chat_] > [class^=content_], /*channels & roles page*/
-[class^=pageBody_], /*channels & roles channel selection page*/
-[class^=page_] > [class^=chat_], /*members page*/
-[class^=chat_], /*chat bg*/
-[class^=chatContent_], /*another layer on chat*/
-[class^=topicsPillContainer_], /*summaries bar*/
-[class^=chatContent_] + [class^=container_], /*memberlist*/
-[class^=members_], /*another layer on memberlist*/
-[class^=member_], /*each member also has a bg*/
-[class^=chat_] [class^=container_], /*forum channel*/
-[class*=mainCard_], /*forum channel entry*/
-[class^=membersWrap_], /*forum post members*/
-[class^=chatLayerWrapper_] > [class^=resizeHandle_], /*thread sidebar resizer*/
-[class^=chatLayerWrapper_] > [class^=container_], /*thread sidebar*/
-[class^=chatLayerWrapper_] > [class^=container_] > [class^=container_], /*thread sidabar title*/
-[class^=chat_] [class^=wrapper_], /*voicechannel*/
-[class^=callContainer_], /*voicechannel again*/
-[class^=callContainer_] > [class^=root_], /*voicechannel yet again*/
-[class^=gradientBackground_], /*gradients in voicechannel*/
-[class^=gradientBackground_] > [class*=sphere_], /*more gradients in voicechannel*/
-[class^=channelChatWrapper_], /*voicechannel chat*/
-[class^=chatTarget_], /*voicechannel chat again*/
-[class^=channelChatWrapper_] [class^=resizeHandle_], /*voicechannel chat resizer*/
-[class^=channelChatWrapper_] [class^=container_], /*voicechannel chat yet again*/
-[class^=rowContainer_], /*stage channel speakers*/
-[class^=root_] [class^=scroller_], /*stage channel audience*/
-[class^=participants_], /*stage channel audience members background*/
-[class^=participants_] > [class^=tileContainer_], /*stage channel audience member*/
-[class^=container_] > [class^=container_] > section, /*stage channel request to speak top bar*/
-[class^=title_], /*top toolbar*/
-[class^=children_]::after, /*toolbar overflow fadeout*/
-[class^=panels_], /*user panel*/
-[class^=chatContent_] > [class^=form_], /*chat input area in visual refresh*/
-[class^=channelTextArea_], /*chat input*/
-[class^=channelTextArea_] [class^=scrollableContainer_], /*chat input again*/
-[class^=chatContent_] > form::before, /*wtf even is this and why, discord?*/
-[class^=chatContent_] > form::after, /*weird thing in scrollbar*/
-[data-list-id="chat-messages"] > [class^=wrapper_], /*skeleton before messages are loaded*/
-[data-list-id="chat-messages"] > [class^=wrapper_] > [class^=wrapper_], /*skeleton has many bones in it*/
-[class^=privateChannels_], /*DM list*/
-[class^=privateChannels_] [class^=scroller_], /*DM list again*/
-[class^=page_] [class^=chat_] > section, /*message requests top bar*/
-[class*=userProfileOuterUnthemed_], /*DM right sidebar when user has no profile theme*/
-[class*=userProfileOuterUnthemed_] [class^=userPanelInner_], /*same*/
-[class^=page_] > [class^=container_], /*friends list page*/
-[class^=page_] > [class^=container_] > section, /*friends list top bar*/
-[class^=page_] > [class^=container_] > [class^=tabBody_], /*friends list*/
-[class^=nowPlayingColumn_], /* friends list right sidebar*/
-[class^=nowPlayingColumn_] > [class^=container_], /*yeah*/
-[class^=nowPlayingColumn_] [class^=body_], /*activities have..*/
-[class^=nowPlayingColumn_] [class^=section_], /*..a double background too*/
-[class^=itemCard_], /*friends list activity cards*/
-[class^=shop_], /*shop tab content*/
-[class^=shopViewWrapper_] > section, /*shop top bar*/
-[class^=shopScroll_], /*shop content*/
-[class^=pageWrapper_], /*again*/
-[id^=vc-indicators-indicator-items], /*online friend count if plugin is enabled*/
-[class^=sidebar_]::after, /*tiny little area under the profile display*/
+[class^=app_],
+[class^=bg_],
+[class*=guilds_],
+[data-list-id="guildsnav"] > [class^=itemsContainer_],
+[class^=sidebar_],
+[class^=sidebar_] [class^=container_],
+[class^=page_] > [class^=chat_] > section,
+[class^=page_] > [class^=chat_] > [class^=content_],
+[class^=pageBody_],
+[class^=page_] > [class^=chat_],
+[class^=chat_],
+[class^=chatContent_],
+[class^=topicsPillContainer_],
+[class^=chatContent_] + [class^=container_],
+[class^=members_],
+[class^=member_],
+[class^=chat_] [class^=container_],
+[class*=mainCard_],
+[class^=membersWrap_],
+[class^=chatLayerWrapper_] > [class^=resizeHandle_],
+[class^=chatLayerWrapper_] > [class^=container_],
+[class^=chatLayerWrapper_] > [class^=container_] > [class^=container_],
+[class^=chat_] [class^=wrapper_],
+[class^=callContainer_],
+[class^=callContainer_] > [class^=root_],
+[class^=gradientBackground_],
+[class^=gradientBackground_] > [class*=sphere_],
+[class^=channelChatWrapper_],
+[class^=chatTarget_],
+[class^=channelChatWrapper_] [class^=resizeHandle_],
+[class^=channelChatWrapper_] [class^=container_],
+[class^=rowContainer_],
+[class^=root_] [class^=scroller_],
+[class^=participants_],
+[class^=participants_] > [class^=tileContainer_],
+[class^=container_] > [class^=container_] > section,
+[class^=title_],
+[class^=children_]::after,
+[class^=panels_],
+[class^=chatContent_] > [class^=form_],
+[class^=channelTextArea_],
+[class^=channelTextArea_] [class^=scrollableContainer_],
+[class^=chatContent_] > form::before,
+[class^=chatContent_] > form::after,
+[data-list-id="chat-messages"] > [class^=wrapper_],
+[data-list-id="chat-messages"] > [class^=wrapper_] > [class^=wrapper_],
+[class^=privateChannels_],
+[class^=privateChannels_] [class^=scroller_],
+[class^=page_] [class^=chat_] > section,
+[class*=userProfileOuterUnthemed_],
+[class*=userProfileOuterUnthemed_] [class^=userPanelInner_],
+[class^=page_] > [class^=container_],
+[class^=page_] > [class^=container_] > section,
+[class^=page_] > [class^=container_] > [class^=tabBody_],
+[class^=nowPlayingColumn_],
+[class^=nowPlayingColumn_] > [class^=container_],
+[class^=nowPlayingColumn_] [class^=body_],
+[class^=nowPlayingColumn_] [class^=section_],
+[class^=itemCard_],
+[class^=shop_],
+[class^=shopViewWrapper_] > section,
+[class^=shopScroll_],
+[class^=pageWrapper_],
+[id^=vc-indicators-indicator-items],
+[class^=sidebar_]::after,
 [class^=layer_],
-[class^=sidebarRegion_], /* settings shit */
+[class^=sidebarRegion_],
 [class^=contentRegion_],
-[class^=contentRegionScroller_], /* main region */
-[class^=sidebarRegionScroller_], /* sidebar region */
+[class^=contentRegionScroller_],
+[class^=sidebarRegionScroller_],
 [class^=standardSidebarView_],
 [class*="themedBackground_"],
 [class*="scrollableContainer_"] {
     background: none !important;
 }
-
-/*remove some shadows*/
 [class^=chat_]::before,
 [class^=header_],
 [class^=content_]::before,
-[class^=tabBody_]::before, /*dm list*/
-[class^=searchBar_] /*dm list search*/ {
+[class^=tabBody_]::before,
+[class^=searchBar_] {
     box-shadow: none;
 }
-
-/*fixes*/
 [class^="sidebar_"],
 [class^="userPanelInner_"] {
     border-radius: 0 !important;
 }
-[class^=privateChannels_] > [class^=scroller_] /*user panel overlaps DM list*/ {
+[class^=privateChannels_] > [class^=scroller_] {
     margin-bottom: 55px;
 }
 [class^="gradientBackground_"] {
     display: none;
-} /*remove leftover blurred gradient in VCs*/
+}
 [class^="chat_"] > [class^="wrapper_"] {
     background: var(--background-mod-subtle);
     border-left: 1px solid var(--border-subtle);
 }
-
-/*make server banner etc scroll away because of overlap*/
 [class^="sidebar_"] [class^="container_"]:has(> [class^="header_"]) {
     position: static;
 }
